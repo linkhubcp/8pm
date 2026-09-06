@@ -20,9 +20,16 @@
           background:#25494e; color:#f6efe4; text-decoration:none;
           font-size:15px; font-weight:600; line-height:1.4;
           border:1px solid #e8a76533; transition:transform .12s, background .12s; }
+  a.btn.withthumb { display:flex; align-items:center; gap:12px; text-align:left; padding:10px 14px; }
+  img.thumb { width:52px; height:52px; border-radius:10px; object-fit:cover; flex:0 0 auto; }
   a.btn:hover { background:#2d585e; transform:translateY(-1px); }
   a.btn:active { transform:translateY(0); opacity:.85; }
   p.empty { color:#8fb0b3; font-size:14px; padding:28px 0; }
+  input.search { width:100%; padding:12px 14px; margin-bottom:14px; border-radius:12px;
+                 background:#25494e; border:1px solid #e8a76533;
+                 color:#f6efe4; font-size:14px; outline:none; }
+  input.search::placeholder { color:#8fb0b3; }
+  p.noresult { color:#8fb0b3; font-size:13px; padding:18px 0; }
   footer { margin-top:30px; font-size:11.5px; color:#8fb0b3; line-height:1.7; }
 </style>
 </head>
@@ -31,8 +38,11 @@
     <img class="avatar" src="profile.jpg" alt="">
     <h1>저녁여덟시</h1>
     <p class="tag">저녁 8시, 집에 혼자 있는 시간</p>
-      <a class="btn" href="https://link.coupang.com/a/gOZ0OBLyxg" rel="nofollow sponsored" target="_blank">아무것도 하기 싫을 때 꺼내는 만두</a>
+
+      <a class="btn" data-t="아무것도 하기 싫을 때 꺼내는 만두" href="https://link.coupang.com/a/gOZ0OBLyxg" rel="nofollow sponsored" target="_blank"><span>아무것도 하기 싫을 때 꺼내는 만두</span></a>
+    <p class="noresult" id="nr" style="display:none">찾는 게 없네요.</p>
     <footer>제가 실제로 쓰는 것들을 모아뒀어요.<br>이 링크들은 쿠팡 파트너스 활동의 일환으로 제공되며, 이에 따른 일정액의 수수료를 제공받습니다.<br><br>영상에 나온 물건과 무관할 수 있어요 — 영상은 특정 상품을 홍보하지 않습니다.<br>영상 속 장면은 AI로 만든 것입니다.</footer>
   </div>
+
 </body>
 </html>
